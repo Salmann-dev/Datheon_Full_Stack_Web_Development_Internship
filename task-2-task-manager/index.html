@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task Manager & Productivity Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header>
+      <h1>Task Manager</h1>
+      <p class="subtitle">Plan your day and track your progress</p>
+    </header>
+
+    <section class="progress" aria-label="Progress">
+      <div class="progress-text">
+        <span id="progress-label">0 of 0 done</span>
+        <span id="progress-percent">0%</span>
+      </div>
+      <div class="progress-bar"><div id="progress-fill"></div></div>
+    </section>
+
+    <form id="task-form" class="task-form" autocomplete="off">
+      <input id="task-input" type="text" placeholder="What needs to be done?" maxlength="120" required />
+      <div class="task-form-row">
+        <select id="priority-input" aria-label="Priority">
+          <option value="low">Low priority</option>
+          <option value="medium" selected>Medium priority</option>
+          <option value="high">High priority</option>
+        </select>
+        <input id="due-input" type="date" aria-label="Due date" />
+        <button type="submit">Add task</button>
+      </div>
+    </form>
+
+    <nav class="filters" aria-label="Filter tasks">
+      <button class="filter active" data-filter="all">All</button>
+      <button class="filter" data-filter="active">Active</button>
+      <button class="filter" data-filter="completed">Completed</button>
+    </nav>
+
+    <ul id="task-list" class="task-list"></ul>
+    <p id="empty-state" class="empty-state" hidden>No tasks here yet.</p>
+
+    <footer class="footer">
+      <span id="items-left">0 tasks left</span>
+      <button id="clear-completed" class="link-btn">Clear completed</button>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
