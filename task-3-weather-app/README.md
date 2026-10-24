@@ -50,4 +50,4 @@ task-3-weather-app/
 
 ## Live Demo
 
-Add your deployed link here after publishing.
+https://salman-weather-app.vercel.app/
