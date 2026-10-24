@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather Forecast & Climate Telemetry</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <h1>Weather Forecast</h1>
+      <div class="unit-toggle" role="group" aria-label="Temperature unit">
+        <button type="button" class="unit active" data-unit="c">°C</button>
+        <button type="button" class="unit" data-unit="f">°F</button>
+      </div>
+    </header>
+
+    <form id="search-form" class="search-form" autocomplete="off">
+      <input id="city-input" type="text" placeholder="Search for a city..." aria-label="City name" />
+      <button type="submit" class="primary">Search</button>
+      <button type="button" id="locate-btn" class="secondary" title="Use my location" aria-label="Use my location">📍</button>
+    </form>
+
+    <div id="status" class="status" role="status" aria-live="polite" hidden></div>
+
+    <section id="weather" class="weather" hidden>
+      <div class="current">
+        <div class="current-main">
+          <h2 id="place-name"></h2>
+          <p id="current-date" class="muted"></p>
+          <div class="current-temp">
+            <span id="current-icon" class="icon"></span>
+            <span id="current-temp"></span>
+          </div>
+          <p id="current-desc" class="desc"></p>
+        </div>
+        <div class="current-stats">
+          <div class="stat"><span class="label">Feels like</span><span id="stat-feels"></span></div>
+          <div class="stat"><span class="label">Humidity</span><span id="stat-humidity"></span></div>
+          <div class="stat"><span class="label">Wind</span><span id="stat-wind"></span></div>
+          <div class="stat"><span class="label">Rain chance</span><span id="stat-rain"></span></div>
+          <div class="stat"><span class="label">Pressure</span><span id="stat-pressure"></span></div>
+          <div class="stat"><span class="label">Cloud cover</span><span id="stat-clouds"></span></div>
+        </div>
+      </div>
+
+      <h3 class="forecast-title">5-Day Forecast</h3>
+      <div id="forecast" class="forecast"></div>
+    </section>
+
+    <footer class="footer">Data by <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a></footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
