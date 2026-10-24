@@ -39,4 +39,4 @@ task-2-task-manager/
 
 ## Live Demo
 
-Add your deployed link here after publishing.
+https://salman-task-manager-app.vercel.app/
