@@ -1,93 +1,70 @@
-# Task 1: Personal Developer Portfolio & Project Showcase
+# Datheon Full Stack Web Development Internship
 
-An interactive developer portfolio designed to look and feel like a VS Code workspace. Visitors browse my work through a file explorer, tabs and a working terminal.
+Submission for the **Datheon Full Stack Web Development Internship (Batch 01)**. This repository contains three completed tasks, each in its own folder with its own README, and each deployed live.
 
-**Live demo:** https://salman-dev-phi.vercel.app/
+**Intern:** Muhammad Salman
+**Program:** Full Stack Web Development Internship, Batch 01 (4 weeks)
 
-## Features
+## Tasks Completed
 
-- VS Code-style interface with a file explorer, editor tabs, activity bar and status bar
-- Sections for About Me, Work Experience, Skills, Projects and Contact
-- Interactive terminal that runs `help`, `about`, `skills`, `projects`, `contact` and `clear`, with command history on the arrow keys
-- Project showcase with live demos and source code links
-- Contact form that sends messages through a serverless function
-- Responsive layout for desktop and mobile
-- SEO metadata and an Open Graph preview image for link sharing
+| # | Task | Tech | Live Demo | Code |
+|---|------|------|-----------|------|
+| 1 | **Personal Developer Portfolio & Project Showcase** | React, TypeScript, Node.js, Vercel serverless functions | [salman-dev-phi.vercel.app](https://salman-dev-phi.vercel.app/) | [`task-1-portfolio`](./task-1-portfolio) |
+| 2 | **Dynamic Task Manager & Productivity Tracker (CRUD)** | HTML, CSS, JavaScript, localStorage | [salman-task-manager-app.vercel.app](https://salman-task-manager-app.vercel.app/) | [`task-2-task-manager`](./task-2-task-manager) |
+| 3 | **Real-Time Weather Forecast & Climate Telemetry App** | HTML, CSS, JavaScript, Open-Meteo REST API | [salman-weather-app.vercel.app](https://salman-weather-app.vercel.app/) | [`task-3-weather-app`](./task-3-weather-app) |
 
-## Featured Projects
+## Project Summaries
 
-| Project | Description | Links |
-|---|---|---|
-| **Copyforge** | AI copywriting tool that generates product descriptions and social posts in a custom brand voice, using the Google Gemini API through a secure serverless proxy | [Live](https://copyforge.vercel.app/) · [Source](https://github.com/Salmann-dev/Copyforge) |
-| **AI Resume Analyzer** | Scores a resume (PDF or Word) against an optional job description and returns strengths, gaps and missing keywords | [Live](https://ai-resume-analyzer-vki0.onrender.com/) · [Source](https://github.com/Salmann-dev/ai-resume-analyzer) |
+### Task 1: Developer Portfolio
+A portfolio styled like a VS Code workspace, with a file explorer, editor tabs and an interactive terminal. It includes About, Work Experience, Skills, Projects and a Contact form that sends messages through a serverless function. It showcases two projects: Copyforge and AI Resume Analyzer.
 
-## Tech Stack
+### Task 2: Task Manager
+A task app with full CRUD: add, edit, delete and complete tasks. It supports priority levels, due dates with overdue highlighting, All/Active/Completed filters and a progress bar. Tasks are saved in the browser with `localStorage`, so they survive a refresh.
 
-- HTML5, CSS3, JavaScript (ES6+)
-- React and TypeScript components
-- Node.js server
-- Vercel serverless functions
-- Deployed on Vercel
+### Task 3: Weather App
+A live weather dashboard. Search any city to see current temperature, conditions with icons, humidity, wind speed, atmospheric pressure and a 5-day forecast. The background changes with the weather and the time of day. It handles loading states and errors such as unknown cities, network failures and timeouts.
 
-## Getting Started
+## Repository Structure
 
-### Prerequisites
+```
+Datheon_Full_Stack_Web_Development_Internship/
+├── README.md
+├── task-1-portfolio/
+├── task-2-task-manager/
+└── task-3-weather-app/
+```
 
-- Node.js 18 or newer
-- npm
+Each task folder has its own README with features, tech used and project details.
 
-### Run locally
+## How to Run
+
+### Task 1: Portfolio
 
 ```bash
-# 1. Go to the project folder
 cd task-1-portfolio
-
-# 2. Install dependencies
 npm install
-
-# 3. Set up environment variables
-cp .env.example .env
-# then open .env and fill in the values
-
-# 4. Start the development server
+cp .env.example .env    # then fill in the values
 npm run dev
 ```
 
-Open **http://localhost:3000** in your browser.
+Open http://localhost:3000.
 
-> The terminal may print `0.0.0.0:3000`. Use `localhost:3000` in the browser.
+### Task 2 and Task 3
 
-## Environment Variables
+Both are plain HTML, CSS and JavaScript, so no install is needed. Open the `index.html` file in a browser, or use the VS Code Live Server extension.
 
-Copy `.env.example` to `.env` and fill in the values. The `.env` file is ignored by Git, so secrets are never committed. The contact form needs these values to send messages. The rest of the site works without them.
+Task 3 needs an internet connection, since it calls the Open-Meteo API. No API key is required.
 
-## Project Structure
+## Tech Stack
 
-```
-task-1-portfolio/
-├── api/
-│   └── contact.js          # Serverless function for the contact form
-├── public/                 # Static assets
-├── src/
-│   └── app/
-│       ├── components/     # ActivityBar, Terminal
-│       ├── about-me.tsx
-│       ├── work-experience.tsx
-│       ├── skills.tsx
-│       ├── copyforge.tsx
-│       ├── contact-me.tsx
-│       ├── layout.tsx
-│       └── page.tsx
-├── server.js               # Local server
-├── vercel.json             # Deployment config
-├── .env.example            # Environment variable template
-└── package.json
-```
+- **Frontend:** HTML5, CSS3, JavaScript (ES6+), React, TypeScript
+- **Backend:** Node.js, Vercel serverless functions
+- **APIs:** Open-Meteo (geocoding and forecast)
+- **Storage:** Browser `localStorage`
+- **Deployment:** Vercel
+- **Tools:** Git, GitHub, VS Code
 
-## Author
-
-**Muhammad Salman**
-BS Information Technology, University of Balochistan
+## Contact
 
 - GitHub: [@Salmann-dev](https://github.com/Salmann-dev)
 - LinkedIn: [Muhammad Salman](https://www.linkedin.com/in/muhammad-salman-09693a289/)
